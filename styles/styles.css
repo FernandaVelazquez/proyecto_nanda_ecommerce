@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px !important;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    
+}
+
+#btn-cart {
+    border: none;
+    color: rgb(218, 207, 95);
+    font-size: 30px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+
+#btn-cart:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(176, 162, 6);
+}
+
+#btn-cart:focus {
+    outline: none;
+}
+
+#container-products {
+    display: grid;
+    gap: 1rem;
+    max-width: 60rem;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.desc {
+    font-size: small
+}
+
+.card {
+    max-width: 30%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.btn-floating {
+    background-color: rgb(176, 162, 6)
+}
+
+.btn-floating:hover {
+    background-color: rgb(218, 207, 95);
+}
+
+.btn-floating i {
+    font-size: 1.3rem;
+}
+
+.container-modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+
+.cart-modal {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.modal-active .cart-modal {
+    margin-top: 0;
+}
+
+.cart-modal h3 {
+    color: rgb(176, 162, 6);
+    padding-bottom: 5px;
+}
+
+.cart-modal #btn-close-cart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: rgb(176, 162, 6) !important;
+    border: none;
+    background-color: white;
+}
+
+.cart-modal #btn-close-cart:hover {
+    cursor: pointer;
+}
+
+.cart-modal #btn-close-cart:focus {
+    outline: none;
+}
+
+.cart-modal .product-price {
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.card .card-image .card-title {
+    color: rgb(4, 120, 48);
+    position: unset;
+    font-size: large;
+    font-weight: 400;
+}
+
+.card .card-content .price {
+    font-weight: 500;
+}
+
+.productInCart {
+    border-left: 5px solid rgb(85, 176, 120);
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productInCart:hover {
+    border-left: 5px solid rgb(4, 120, 48);
+}
+
+.btn-delete {
+    background-color: white;
+    color: rgb(4, 120, 48);
+    border: none;
+    font-size: 15px;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: rgb(85, 176, 120);
+}
+
+.btn-delete:focus {
+    outline: none;
+    background-color: rgb(85, 176, 120);
+}
+
+
+/* ====== FOOTER ====== */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3em;
+    gap: 1em;
+    background-color: rgb(236, 232, 195);
+    ;
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        display: grid;
+        grid-template-areas: "privacy ubicacion copyright ";
+        grid-template-columns: repeat(3, 20vw) auto;
+        text-align: left;
+    }
+
+    .footer .footer-explorar {
+        grid-area: explorar;
+  
+    }
+
+    .footer .footer-ubicacion {
+        grid-area: ubicacion;
+    }
+
+    .footer .footer-privacy {
+        grid-area: privacy;
+    }
+}
+
+.footer h5 {
+    font-size: large;
+}
+
+.footer span {
+    display: block;
+    font-size: 1rem;
+    margin: 0.5em;
+}
+
+.footer a{
+    color: rgb(4, 120, 48);
+}
+
+.footer a{
+    color: rgb(4, 120, 48);
+}
+
+.footer img{
+    width: 80%;
+    }
