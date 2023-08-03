@@ -5,7 +5,7 @@ const products = [
         category: 'Top',
         description: 'Camisaco de Corderoy oversize',
         price: 18000,
-        image: "/data/images/camisaco_corderoy.jpg",
+        image: "../data/images/camisaco_corderoy.jpg",
         quantity: 1
     },
     {
@@ -14,7 +14,7 @@ const products = [
         category: 'Bottom',
         description: 'Pantalon Sastrero pinzado',
         price: 22000,
-        image: "/data/images/pantalon_sastre.jpg",
+        image: "../data/images/pantalon_sastre.jpg",
         quantity: 1
     },
     {
@@ -23,7 +23,7 @@ const products = [
         category: 'Bottom',
         description: 'Jean recto tiro alto sin botamanga',
         price: 26000,
-        image: "/data/images/jean_recto.png",
+        image: "../data/images/jean_recto.png",
         quantity: 1
     },
     {
@@ -32,7 +32,7 @@ const products = [
         category: 'Top',
         description: 'Cargidan de lana tejido con 2 botones',
         price: 19000,
-        image: "/data/images/cardigan_lana.jpg",
+        image: "../data/images/cardigan_lana.jpg",
         quantity:1
     },
        {
@@ -41,7 +41,7 @@ const products = [
         category: 'Top',
         description: 'Chaleco tejido escote en V oversize',
         price: 19000,
-        image: "/data/images/chaleco_tejido.jpg",
+        image: "../data/images/chaleco_tejido.jpg",
         quantity: 1
     },
     {
@@ -50,7 +50,7 @@ const products = [
         category: 'Top',
         description: 'Remera manga corta rayada 97% algodon, 3% elastano',
         price: 11000,
-        image: "/data/images/remera_rayada.png",
+        image: "../data/images/remera_rayada.png",
         quantity: 1
     },
     // {
