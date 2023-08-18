@@ -4,9 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- CDN bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CDN sweetalert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CDN toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Tienda Online Nanda Clothing</title>
 </head>
@@ -14,26 +22,53 @@
 <body>
     <header>
         <h1>[ N A N D A ]</h1>
-        <button id="btn-cart"><i class="fas fa-shopping-cart"></i><span id="counter-cart">0</span></button>
+        <button id="btn-cart"><i class="bi bi-cart-fill"></i><span id="counter-cart">0</span></button>
     </header>
 
 
-    <main id="container-products">
+    <main>
+
+        <!-- <div class="main-filters">
+            <h2 class="main-title">Filtrar <i class="bi bi-funnel-fill"></i> </h2>
+            <ul class="filters">
+                <li>
+                    <button id="todos" type="button" class="btn btn-category">Todos los productos</button>
+                </li>
+                <li>
+                    <button id="abrigos" type="button" class="btn btn-category">Abrigos</button>
+                </li>
+                <li>
+                    <button id="superiores" type="button" class="btn btn-category">Superiores</button>
+                </li>
+                <li>
+                    <button id="inferiores" type="button" class="btn btn-category">Inferiores</button>
+                </li>
+            </ul>
+        </div> -->
+
+        <div id="container-products">
+            <!-- Products shown from JS -->
+        </div>
+
+        <div class="container-modal">
+            <div class="cart-modal">
+                <h3>Carrito</h3>
+                <button id="btn-close-cart">X</button>
+                <div id="container-cart">
+                    <!-- Products shown from JS -->
+                </div>
+                <p class="product-price">Precio Total: $<span id="total-price"></span></p>
+                <div class="cart-btn">
+                    <button id="empty-cart" type="button" class="btn">VACIAR CARRITO</button>
+                    <button id="buy-cart" type="button" class="btn">INICIAR COMPRA</button>
+                </div>
+
+            </div>
+        </div>
 
     </main>
 
-    <div class="container-modal">
-        <div class="cart-modal">
-            <h3>Cart</h3>
-            <button id="btn-close-cart"><i class="fas fa-times"></i></button>
-            <div id="container-cart">
 
-            </div>
-
-            <p class="product-price">Precio Total: $<span id="total-price"></span>
-            </p>
-        </div>
-    </div>
 
     <footer class="footer">
 
@@ -43,7 +78,7 @@
             <span>Buenos Aires, Argentina</span>
             <span>Lun a Sab 10:00 a 20:00</span>
             <span><a href="https://mail.google.com/" target="_blank">info@nandaclothing.com</a></span>
-            
+
         </div>
         <div class="footer-privacy">
             <span>Privacy policy</span>
@@ -51,27 +86,23 @@
             <span>Legal terms</span>
         </div>
         <div class="footer-copyright">
-            <span><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a></span>
+            <span><a href="https://www.instagram.com/" target="_blank"><i
+                        class="fa-brands fa-instagram fa-xl"></i></a></span>
             <span> Copyright © 2023 NANDA Clothing. </span><span> Todos los derechos reservados</span>
         </div>
         <div class="footer-logo">
             <figure>
-                <a href="./index.html"><img src="./images/logo-color.png" alt=""></a>
+                <a href="./index.html"><img src="./img/logo-color.png" alt=""></a>
             </figure>
         </div>
-        
+
     </footer>
 
-    <script src="./js/stock.js"></script>
-    <script src="./js/modals.js"></script>
-    <script src="./js/cart.js"></script>
     <script src="./js/home.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/modals.js"></script>
     <script src="./js/main.js"></script>
-    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/b6982e031d.js" crossorigin="anonymous"></script>
-
-
+   
 </body>
-
 
 </html>

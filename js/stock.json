@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Camisaco Corderoy",
+        "category": "abrigos",
+        "description": "Camisaco Crema de corderoy oversize",
+        "price": 18000,
+        "image": "./img/abrigos/01.jpg",
+        "quantity": 1
+    },
+    {
+        "id": 2,
+        "name": "Cardigan de Lana",
+        "category": "abrigos",
+        "description": "Cargidan de lana tejido con 2 botones",
+        "price": 19000,
+        "image": "./img/abrigos/02.jpg",
+        "quantity":1
+    },
+    {
+        "id": 3,
+        "name":"Sweater Lana",
+        "category":"abrigos",
+        "description":"Sweater Gris de lana con mangas globo",
+        "price": 14000,
+        "image":"./img/abrigos/03.jpg",
+        "quantity": 1
+    },
+    {
+        "id": 4,
+        "name":"Tapado Largo",
+        "category": "abrigos",
+        "description":"Tapado largo estilo trench cuero vegano",
+        "price":27000,
+        "image":"./img/abrigos/04.jpg",
+        "quantity":1
+    },
+    {
+        "id": 5,
+        "name":"Campera Jean con Corderito",
+        "category": "abrigos",
+        "description":"Campera de Jean claro con corderito oversize",
+        "price":25000,
+        "image":"./img/abrigos/05.jpg",
+        "quantity":1
+    },
+    {
+        "id": 6,
+        "name": "Jean recto",
+        "category": "inferiores",
+        "description": "Jean recto claro tiro alto sin botamanga",
+        "price": 26000,
+        "image": "./img/inferiores/01.png",
+        "quantity": 1
+    },
+    {
+        "id": 7,
+        "name": "Pantalon Sastrero",
+        "category": "inferiores",
+        "description": "Pantalon Sastrero pinzado negro",
+        "price": 22000,
+        "image": "./img/inferiores/02.jpg",
+        "quantity": 1
+    },
+    {
+        "id": 8,
+        "name": "Remera Rayada",
+        "category": "superiores",
+        "description": "Remera manga corta rayada blanca y negra",
+        "price": 11000,
+        "image": "./img/superiores/01.png",
+        "quantity": 1
+    }, 
+       {
+        "id": 9,
+        "name": "Chaleco tejido",
+        "category": "superiores",
+        "description": "Chaleco tejido negro escote en V oversize",
+        "price": 19000,
+        "image": "./img/superiores/02.jpg",
+        "quantity": 1
+    },
+    {
+        "id": 10,
+        "name": "Camisa Lino",
+        "category": "superiores",
+        "description": "Camisa de lino holgada verde oliva",
+        "price": 19000,
+        "image": "./img/superiores/03.jpg",
+        "quantity": 1
+    }
+]
