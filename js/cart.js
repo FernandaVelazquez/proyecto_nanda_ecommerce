@@ -123,6 +123,7 @@ const emptyCart = () => {
                 },
                 gravity: 'bottom',
             }).showToast();
+            containerModal.classList.toggle('modal-active')
             emptyCartBtn.classList.add('disabled')
             buyCartBtn.classList.add('disabled')
         }
