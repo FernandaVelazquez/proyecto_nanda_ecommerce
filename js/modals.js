@@ -25,7 +25,6 @@ containerModal.addEventListener('click', () => {
 })
 
 cartModal.addEventListener('click', (e) => {
-    e.stopPropagation()
     if (cart && cart.length <= 0) {
         emptyCartBtn.classList.add('disabled')
         buyCartBtn.classList.add('disabled')

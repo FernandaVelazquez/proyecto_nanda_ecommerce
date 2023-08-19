@@ -342,7 +342,6 @@ p {
 }
 
 .btn-delete {
-    background-color: white;
     color: rgb(4, 120, 48);
     border: none;
     font-size: 15px;
@@ -350,14 +349,9 @@ p {
 
 .btn-delete:hover {
     cursor: pointer;
+    color:white;
     background-color: rgb(85, 176, 120);
 }
-
-.btn-delete:focus {
-    outline: none;
-    background-color: rgb(85, 176, 120);
-}
-
 
 .disabled {
     display: none;

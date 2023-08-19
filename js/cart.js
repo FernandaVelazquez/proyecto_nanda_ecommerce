@@ -51,7 +51,7 @@ const showProductsCart = (product) => {
         <p>Item: ${product.name}</p>
         <p>Precio: ${product.price}</p>
         <p id="quantity-${product.id}">Cantidad: ${product.quantity}</p>
-        <button class="btn wabes-effect waves-light btn-delete" value="${product.id}"><i class="bi bi-trash3-fill "></i></button>
+        <button class="btn wabes-effect waves-light btn-delete" value="${product.id}"><i class="btn-delete bi-trash3-fill "></i></button>
         `
     container.appendChild(div)
 }
@@ -66,7 +66,7 @@ const showCart = (cart) => {
             <p>Item: ${product.name}</p>
             <p>Precio: ${product.price}</p>
             <p id="quantity-${product.id}">Cantidad: ${product.quantity}</p>
-            <button class="btn wabes-effect waves-light btn-delete" value="${product.id}"><i class="bi bi-trash3-fill"></i></button>
+            <button class="btn btn-delete wabes-effect waves-light" value="${product.id}"><i class="bi bi-trash3-fill"></i></button>
             `
         container.appendChild(div)
     });
@@ -126,6 +126,8 @@ const emptyCart = () => {
             containerModal.classList.toggle('modal-active')
             emptyCartBtn.classList.add('disabled')
             buyCartBtn.classList.add('disabled')
+            showCart(cart)
+            updateTotalsCart(cart)
         }
     })
 }
