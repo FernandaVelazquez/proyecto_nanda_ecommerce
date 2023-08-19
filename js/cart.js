@@ -75,6 +75,14 @@ const showCart = (cart) => {
 const deleteProductCart = (id) => {
     const productIndex = cart.findIndex(product => product.id == id)
     cart.splice(productIndex, 1)
+    Toastify({
+        text: "El producto fue eliminado!",
+        duration: 3000,
+        style: {
+            background: 'rgb(176, 162, 6)',
+        },
+        gravity: 'bottom',
+    }).showToast();
     showCart(cart)
     updateTotalsCart(cart)
 }
@@ -91,7 +99,6 @@ const showTotalsCart = (totalPurchase, totalQuantity) => {
     const counterCart = document.getElementById('counter-cart')
     totalPrice.innerText = totalPurchase
     counterCart.innerText = totalQuantity
-
 }
 
 const emptyCart = () => {
@@ -112,7 +119,7 @@ const emptyCart = () => {
                 text: "Tu carrito fue vaciado!",
                 duration: 3000,
                 style: {
-                    background: ' rgb(4, 120, 48)',
+                    background: 'rgb(176, 162, 6)',
                 },
                 gravity: 'bottom',
             }).showToast();
@@ -138,46 +145,37 @@ const loadCart = () => {
         updateTotalsCart(cart)
     }
 }
-const btn = document.getElementById('button');
 
 const buyCart = () => {
-    Swal.fire({
-        text: 'Ingresa tu correo electrónico, por favor.',
-        input: 'email',
-        showCancelButton: true,
-        confirmButtonText: 'Confirmar',
-        confirmButtonColor: 'rgb(176, 162, 6)',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            let timerInterval
-            Swal.fire({
-                title: 'Estamos preparando todo!',
-                timer: 2500,
-                timerProgressBar: true,
-                didOpen: () => {
-                    Swal.showLoading()
-                },
-                willClose: () => {
-                    clearInterval(timerInterval)
-                }
-            }).then((result) => {
-                Swal.fire({
-                    title: `Ha sido un éxito.
-                    ¡Muchas gracias por tu compra!`,
-                    text: 'Te enviaremos un correo con todos los datos para que puedas abonar tu compra y coordinar la entrega.',
-                    confirmButtonColor: 'rgb(176, 162, 6)',
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        cart.length = 0;
-                        localStorage.setItem('cart', JSON.stringify(cart))
-                        showCart(cart)
-                        updateTotalsCart(cart)
-                        emptyCartBtn.classList.add('disabled')
-                        buyCartBtn.classList.add('disabled')
-                    }
+    const btn = document.getElementById('button-submit');
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+            btn.value = 'Comprando...';
+            const serviceID = 'default_service';
+            const templateID = 'template_cq90sk6';
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Comprar';
+                    Swal.fire({
+                        title: `Ha sido un éxito.
+                                ¡Muchas gracias por tu compra!`,
+                        text: 'Te enviaremos un correo con todos los datos para que puedas abonar tu compra y coordinar la entrega.',
+                        confirmButtonColor: 'rgb(176, 162, 6)',
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            cart.length = 0;
+                            localStorage.setItem('cart', JSON.stringify(cart))
+                            showCart(cart)
+                            updateTotalsCart(cart)
+                            containerModalBuy.classList.toggle('modal-active')
+                            containerModal.classList.toggle('modal-active')
+                        }
+                    })
+                        , (err) => {
+                            btn.value = 'Confirmar';
+                            alert(JSON.stringify(err));
+                        };
                 })
-            })
-        }
-    })
+        })
 }

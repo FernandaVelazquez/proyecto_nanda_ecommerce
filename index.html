@@ -21,14 +21,14 @@
 
 <body>
     <header>
+
         <h1>[ N A N D A ]</h1>
         <button id="btn-cart"><i class="bi bi-cart-fill"></i><span id="counter-cart">0</span></button>
     </header>
-
+    <div class="black-bar">ENVÍOS GRATIS A PARTIR DE $20,000</div>
 
     <main>
-
-        <!-- <div class="main-filters">
+        <div class="main-filters">
             <h2 class="main-title">Filtrar <i class="bi bi-funnel-fill"></i> </h2>
             <ul class="filters">
                 <li>
@@ -44,7 +44,7 @@
                     <button id="inferiores" type="button" class="btn btn-category">Inferiores</button>
                 </li>
             </ul>
-        </div> -->
+        </div>
 
         <div id="container-products">
             <!-- Products shown from JS -->
@@ -59,16 +59,41 @@
                 </div>
                 <p class="product-price">Precio Total: $<span id="total-price"></span></p>
                 <div class="cart-btn">
-                    <button id="empty-cart" type="button" class="btn">VACIAR CARRITO</button>
-                    <button id="buy-cart" type="button" class="btn">INICIAR COMPRA</button>
+                    <button id="empty-cart" type="button" class="btn btn-empty">VACIAR CARRITO</button>
+                    <button id="buy-cart" type="button" class="btn btn-buy">INICIAR COMPRA</button>
                 </div>
+            </div>
+        </div>
+
+        <div class="container-modal-buy">
+            <div class="buy-modal">
+                <h3>Proceso de Compra:</h3><br>
+                
+                <form id="form">
+                    <div class="field">
+                        <label for="reply_to">Nombre y Apellido:</label><br>
+                        <input type="text" name="name" id="name" required><br><br>
+
+                        <label for="reply_to">Dirección de entrega (calle y número):</label><br>
+                        <input type="text" name="address" id="address" required><br><br>
+
+                        <label for="reply_to">Código Postal:</label><br>
+                        <input type="number" name="cp" id="cp" required><br><br>
+
+                        <label for="reply_to">Correo electrónico:</label><br>
+                        <input type="email" name="email" id="email" required><br><br>
+                    </div>
+                    <div class="cart-btn">
+                        <button id="btn-cancel" type="buton" class="btn">CANCELAR</button>
+                        <input type="submit" id="button-submit" class="btn" value="COMPRAR"></button>
+                    </div>
+                </form>
 
             </div>
         </div>
 
+
     </main>
-
-
 
     <footer class="footer">
 
@@ -86,8 +111,7 @@
             <span>Legal terms</span>
         </div>
         <div class="footer-copyright">
-            <span><a href="https://www.instagram.com/" target="_blank"><i
-                        class="fa-brands fa-instagram fa-xl"></i></a></span>
+
             <span> Copyright © 2023 NANDA Clothing. </span><span> Todos los derechos reservados</span>
         </div>
         <div class="footer-logo">
@@ -102,7 +126,10 @@
     <script src="./js/cart.js"></script>
     <script src="./js/modals.js"></script>
     <script src="./js/main.js"></script>
-   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('2iHjKVuaTmrV00iHb')
+    </script>
 </body>
 
 </html>

@@ -1,9 +1,11 @@
 const containerModal = document.querySelector('.container-modal')
+const containerModalBuy = document.querySelector('.container-modal-buy')
 const openCart = document.getElementById('btn-cart')
 const closeCart = document.getElementById('btn-close-cart')
 const cartModal = document.querySelector('.cart-modal')
 const emptyCartBtn = document.getElementById('empty-cart')
-const buyCartBtn = document.getElementById('buy-cart')
+const buyCartBtn = document.querySelector('.btn-buy')
+const btnCancel = document.getElementById('btn-cancel')
 
 
 openCart.addEventListener('click', () => {
@@ -31,14 +33,19 @@ cartModal.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn-delete')) {
         deleteProductCart(e.target.value)
     }
-
-})
-
-emptyCartBtn.addEventListener('click', () => {
-    emptyCart(cart)
+    if (e.target.classList.contains('btn-empty')) {
+        emptyCart(cart)
+    }
+    if (e.target.classList.contains('btn-buy')) {
+        buyCart()
+    }
 })
 
 buyCartBtn.addEventListener('click', () => {
-    buyCart(cart)
+    containerModalBuy.classList.toggle('modal-active')
+})
+
+btnCancel.addEventListener('click', (e) => {
+    containerModalBuy.classList.toggle('modal-active')
 })
 
